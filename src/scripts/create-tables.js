@@ -9,7 +9,6 @@ const createDefaultTable = async () => {
         const sqlCommandsBuffer = await fs.readFile(sqlFilePath)
         const sqlCommands = sqlCommandsBuffer.toString()
         await db.query(sqlCommands)
-        console.log(sqlCommands);
     } catch (error) {
         console.log(error);
     }
